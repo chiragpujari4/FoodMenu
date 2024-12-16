@@ -1,0 +1,36 @@
+body{
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.navbar-brand   
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.logo{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+

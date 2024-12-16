@@ -1,0 +1,27 @@
+{% extends 'food/base.html' %}
+
+{% block body %}
+<div class="container">
+<form method="post">
+    {% csrf_token %}
+    <center>
+        <div class="box" style="border: solid black 10px; background-color: rgba(196, 156, 252, 0.377);">
+        {% for field in form %}
+            <div class="row-name">
+            <b>{{ field.name }}</b>
+            </div>
+            <div class="row-field">
+            {{ field }}
+            </div>
+            <br>
+        {% endfor %}
+        <button type="submit" style="background-color: green; color: white;">LogIn</button>
+    </form>
+        </div>
+        </center>
+    </div>
+    {% endblock %}
+    
+
+    <button type="submit">SignUp</button>
+</form>

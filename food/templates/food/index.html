@@ -1,0 +1,53 @@
+{% extends 'food/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body style="background-color: white;">
+    
+    
+    {% block body %}
+
+        {% for item in item_list %}
+            
+            <div class="row">
+                <div class="col1" style="display: inline-block; margin-left: 15%; margin-top: 4%;">
+                    <img class="card" src="{{ item.item_image }}" height="150px;" width="150px;">
+                </div>
+
+                <div class="col2" style="display: inline-block; margin-left: 16%;">
+                    <h2>{{ item.item_name }}</h2>
+                    <h3>{{ item.item_desc }}</h3>
+                    <h4>{{ item.item_price }}</h4>
+                    <h5>{{ item.user_name }}</h5>
+                </div>
+
+                <div class="col3" style="display: inline-block; margin-left: 60%;">
+                    <a href="/food/{{item.id}}"><button style="background-color: green; color: white; display: inline-block;">Details</button></a>
+                </div>
+
+                <div class="col4" style="display: inline-block; margin-left: 60%">
+                    <a href="/food/update/{{item.id}}"><button style="background-color: green; color: white; display: inline-block; width: 56px;">Update</button></a>
+                </div>
+                
+            </div>
+    
+        {% endfor %}
+
+    {% endblock %}   
+
+
+    <ul>
+            
+        <li>  
+            <a href="/food/{{item.id}}" style="text-decoration: none;">{{item.id}} -- {{item.item_name}}</a>
+        </li>
+    </ul>
+
+</body>
+</html>
